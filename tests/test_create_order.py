@@ -1,7 +1,6 @@
 import json
-
+import allure
 import pytest
-
 from api_methods import ApiMethods
 
 
@@ -51,6 +50,8 @@ class TestOrderCreate:
     "GREY", "BLACK"]}
     )
 
+    @allure.title('Создание заказа со всеми возможными вариантами параметра color')
+    @allure.description('Тестируется создание заказа со следующим данными в параметре color: GREY; BLACK; GREY, BLACK; и без данного параметра ')
     @pytest.mark.parametrize('payload', payloads)
     def test_successful_create_order_with_different_color(self, payload):
         payload_string = json.dumps(payload)

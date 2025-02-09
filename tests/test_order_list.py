@@ -1,9 +1,11 @@
-import pytest
 import json
 from api_methods import ApiMethods
-from data import CourierData
+import allure
 
 class TestOrderList:
+
+    @allure.title('Получение списка заказа карьера')
+    @allure.description('После предварительного создания курьера, создания заказа и принятия заказа курьером, при получении списка заказов курьера код ответа 200, а в теле ответа содержится список заказов orders в котором указан id ранее принятого заказа')
     def test_get_courier_order_list(self, create_login_delete_courier):
         order_payload= {
         "firstName": "Naruto",
