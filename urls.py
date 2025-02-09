@@ -1,0 +1,10 @@
+class Urls:
+    MAIN_SITE = 'https://qa-scooter.praktikum-services.ru/'
+    CREATE_COURIER_API = MAIN_SITE + 'api/v1/courier'
+    LOGIN_COURIER_API = MAIN_SITE + 'api/v1/courier/login'
+    DELETE_COURIER_API = MAIN_SITE + 'api/v1/courier/'
+    CREATE_ORDER_API = MAIN_SITE + 'api/v1/orders'
+    CANCEL_ORDER_API = MAIN_SITE + 'api/v1/orders/cancel'
+    LIST_ORDER_API = MAIN_SITE + 'api/v1/orders'
+    ORDER_ACCEPTED = MAIN_SITE + 'api/v1/orders/accept/'
+    GET_ORDER_BY_TRACK = MAIN_SITE + '/api/v1/orders/track'
